@@ -57,7 +57,7 @@
 
         .article p{
             text-align: justify;
-            padding:15px;
+            padding:10px;
             aling-text:center;
             color:#222;
             font-size:22px;

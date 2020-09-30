@@ -15,12 +15,35 @@
         
         
 		display: grid;
-		grid-template-columns: 50% 50%;
-		grid-template-rows:  300px 300px ;
+		grid-template-columns: 25% 25% 25% 25%;
+		
+		
 		grid-column-gap: 0px;
 		grid-row-gap: 0px;
 		
 }
+@media (max-width: 600px) {
+	.contenedorPrincipal{
+        
+    
+		grid-template-columns: 50% 50%;
+		
+	
+		
+}
+		}
+
+		@media (max-width: 450px) {
+	.contenedorPrincipal{
+        
+    
+		grid-template-columns: 100%;
+		
+	
+		
+}
+		}
+	
 .contenidoProducto{
 	
 }
@@ -68,12 +91,12 @@
 	</style>
 </head>
 <body>
-	<div id="contenedorPrincipal">
+	<div id="contenedorProductos">
 
 	</div>
 		<script>
 			$(document).ready(function(){
-				$('#contenedorPrincipal').load("productos/grid_productos.php");
+				$('#contenedorProductos').load("productos/grid_productos.php");
 			});
 		</script>
 </body>

@@ -21,26 +21,32 @@
 
  ?>
 
-<div class="contenedorPrincipal" style="text-align: center;">
+<div class="contenedorPrincipal" style="text-align: center; ">
+
 
 
 	<?php while($ver=mysqli_fetch_row($result)): ?>
 
-		<div class="contein" (click)="viewNotice()">
-		<?php 
-			$imgVer=explode("/", $ver[4]) ; 
-			$imgruta=$imgVer[1]."/".$imgVer[2]."/".$imgVer[3];
-			?>
-			<picture><img width="100%" src="<?php echo $imgruta ?>"></picture>
-			<div class="float">
-			<h4 class="title">nombre propiedad:<?php echo $ver[0]; ?></h4>
-			<span class="subtitle">descripcion propiedad:<?php echo $ver[1]; ?>
-			numero:<?php echo $ver[2]; ?>
-			precio:<?php echo $ver[3]; ?>
-			</span>
-    		</div>
-    
-		</div>
+
+		<div class="conteiner" style="width: 18rem;">
+<?php 
+	$imgVer=explode("/", $ver[4]) ; 
+	$imgruta=$imgVer[1]."/".$imgVer[2]."/".$imgVer[3];
+?>
+  <img class=" card-img-top" width="100%" src="<?php echo $imgruta ?>">
+  <div class="card-body">
+    <h5 class="card-title">descripcion:</h5>
+    <p class="card-text"><?php echo $ver[1]; ?></p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Numero contacto: <?php echo $ver[1]; ?></li>
+    <li class="list-group-item">precio: <?php echo $ver[3]; ?></li>
+	<li class="list-group-item">habitaciones: <?php echo $ver[6]; ?></li>
+	<li class="list-group-item"> baños: <?php echo $ver[7]; ?></li>
+  </ul>
+	
+</div>
+		
 
 	
 

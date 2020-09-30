@@ -50,3 +50,11 @@ a:hover {
 .open{
   background-color: yellow;
 }
+media (max-width:800px){
+
+}
+@media (max-width: 600px) {
+  .facet_sidebar {
+    display: none;
+  }
+}

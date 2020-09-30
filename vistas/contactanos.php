@@ -17,6 +17,7 @@ if(isset($_SESSION['usuario'])){
     letter-spacing:1px;
 }
  
+
 .principal {
     display:block;
     margin:0 auto;
@@ -33,19 +34,21 @@ form {
 input, textarea {
     width:380px;
     height:27px;
-    background:#666666;
+    background:whitesmoke;
     border:2px solid #f6f6f6;
     padding:10px;
     margin-top:5px;
     font-size:10px;
-    color:#ffffff;
+    color:#222;
 }
  
 textarea {
     height:150px;
+    color:#222;
 }
  
 #submit {
+    color:#222; 
     width:85px;
     height:35px;
     border:none;
@@ -55,7 +58,7 @@ textarea {
         </style>
 	</head>
 	<body>
-    <form method="post" action="../../procesos/correos/correos.php">
+    <form method="post" action="../procesos/correos/correos.php">
        <label for="nombre">Nombre:</label>
        <input id="nombre" name="nombre" placeholder="Nombre completo">
        <label for="email">Email:</label>
