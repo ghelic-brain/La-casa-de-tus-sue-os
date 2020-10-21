@@ -34,30 +34,27 @@
 
             
           </li>
-          <li class="">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Administrar Articulos <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-            <?php
-              if( $_SESSION['rolUsuario']=="administrador"){ 
-          ?>
-              <li><a href="categorias.php">Categorias</a></li>
-
-              <?php
-               }
-            ?>
-              <li><a href="articulos.php">Ofertar Propiedad</a></li>
-            </ul>
-          </li>
           <?php
               if( $_SESSION['rolUsuario']=="administrador"){ 
           ?>
+          <li class="">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Administrar Articulos <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+            
+              <li><a href="categorias.php">Categorias</a></li>
+
+              
+              <li><a href="articulos.php">Ofertar Propiedad</a></li>
+            </ul>
+          </li>
+          
           <li ><a href="usuarios.php">Administrar usuarios</a>
             </li>
+            
+         
             <?php
                }
             ?>
-         
-          
           <li class="dropdown" >
             <a href="#" style="color: red"  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> Usuario: </a>
             <ul class="dropdown-menu">
@@ -65,6 +62,7 @@
               
             </ul>
           </li>
+         
         </ul>
       </div>
       <!--/.nav-collapse -->
